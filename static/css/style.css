@@ -429,7 +429,7 @@ h5 {
 }
 
 .logo_pic {
-    width: 50px;
+  width: 50px;
 }
 
 .box-logo .logo_pic:hover .tooltiptext {
@@ -745,7 +745,10 @@ b i:last-child {
 .portfolio_item {
   position: relative;
   overflow: hidden;
-  display: block;
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio_item .portfolio_item_hover {
@@ -841,20 +844,18 @@ b i:last-child {
 .img_pos {
   border: 5px solid white;
   border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  margin-right: auto;
+  margin-left: auto;
   padding: 50px;
-  /* margin-right: -50%; */
-  transform: translate(-50%, -50%);
   height: 200px;
   width: 200px;
   transition: 1.5s ease;
 }
 
 .portfolio_item:hover .img_pos {
-  height: 480px;
-  width: 480px;
+  /* height: 480px;
+  width: 480px; */
+  transform: scale(2.5);
   background-color: #ffbf00;
   box-shadow: 0 0 5px #ffbf00;
 
@@ -1036,7 +1037,6 @@ footer img {
   border: 2px solid #ffbf00;
   box-shadow: 10px 10px 5px #838688;
 }
-
 
 /* Services page
 ==================================================*/
@@ -1272,6 +1272,11 @@ textarea:focus {
   .portfolio .categories-grid .categories ul li {
     float: none;
   }
+  /* class to set the width full for portfolio box on mobile screen */
+  .portfolio_box {
+    width: 100%;
+  }
+  /*  */
 }
 
 @media only screen and (max-width: 520px) {
